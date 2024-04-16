@@ -78,17 +78,17 @@ def launch_mev_relay(
 
     network_name = NETWORK_ID_TO_NAME.get(network_id, network_id)
 
-    # image = mev_params.mev_relay_image
-    image = ImageBuildSpec(
-        # Name to give built image
-        # MANDATORY
-        image_name="prof-project/prof-relay",
-        
-        # Locator to build context within the Kurtosis package
-        # As of now, Kurtosis expects a Dockerfile at the root of the build context
-        # MANDATORY
-        build_context_dir="/prof-relay"
-    )
+    image = mev_params.mev_relay_image
+    #image = ImageBuildSpec(
+    #    # Name to give built image
+    #    # MANDATORY
+    #    image_name="prof-project/prof-relay",
+    #
+    #    # Locator to build context within the Kurtosis package
+    #    # As of now, Kurtosis expects a Dockerfile at the root of the build context
+    #    # MANDATORY
+    #    build_context_dir="/prof-relay"
+    #)
 
     env_vars = {
         "GENESIS_FORK_VERSION": constants.GENESIS_FORK_VERSION,
@@ -100,6 +100,8 @@ def launch_mev_relay(
         "LOG_LEVEL": "debug",
         "DB_TABLE_PREFIX": "custom",
     }
+
+    plan.print("builder_uri {0}".format(builder_uri))
 
     redis_url = "{}:{}".format(redis.hostname, redis.port_number)
     postgres_url = postgres.url + "?sslmode=disable"

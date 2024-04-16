@@ -72,9 +72,9 @@ global_client_log_level: info
 snooper_enabled: false
 ethereum_metrics_exporter_enabled: false
 parallel_keystore_generation: false
-mev_type: null
+mev_type: full-gramine
 mev_params:
-  mev_relay_image: flashbots/mev-boost-relay
+  mev_relay_image: ghcr.io/prof-project/prof-relay
   mev_relay_api_extra_args: []
   mev_relay_housekeeper_extra_args: []
   mev_relay_website_extra_args: []
