@@ -265,6 +265,11 @@ def input_parser(plan, input_args):
             mev_flood_seconds_per_bundle=result["mev_params"][
                 "mev_flood_seconds_per_bundle"
             ],
+            prof_sequencer_image=result["mev_params"]["prof_sequencer_image"],
+            prof_sequencer_extra_args=result["mev_params"]["prof_sequencer_extra_args"],
+            prof_sequencer_seconds_per_bundle=result["mev_params"][
+                "prof_sequencer_seconds_per_bundle"
+            ],
         ),
         tx_spammer_params=struct(
             tx_spammer_extra_args=result["tx_spammer_params"]["tx_spammer_extra_args"],

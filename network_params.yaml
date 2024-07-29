@@ -53,7 +53,7 @@ network_params:
   max_churn: 8
   ejection_balance: 16000000000
   capella_fork_epoch: 0
-  deneb_fork_epoch: 4
+  deneb_fork_epoch: 1
   electra_fork_epoch: null
   network: kurtosis
   min_validator_withdrawability_delay: 256
@@ -74,6 +74,9 @@ parallel_keystore_generation: false
 mev_type: full
 mev_params:
   mev_builder_image: prof-project/builder-prof-merger
+  prof_sequencer_image: prof-project/prof-sequencer
+  prof_sequencer_seconds_per_bundle: 1
+  prof_sequencer_extra_args: []
   # mev_relay_image: flashbots/mev-boost-relay
   mev_relay_api_extra_args: []
   mev_relay_housekeeper_extra_args: []
