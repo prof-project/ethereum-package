@@ -6,6 +6,7 @@ participants:
     el_extra_labels: {}
     el_tolerations: []
     cl_client_type: lighthouse
+    # cl_client_image: prof-lighthouse
     cl_client_image: sigp/lighthouse:latest
     cl_client_log_level: ""
     cl_tolerations: []
