@@ -39,6 +39,7 @@ def launch_mev_flood(
         ),
     )
 
+    # ToDo: check
     # Initialize without the -s flag
     init_command = "./run init -r {0} -k {1} -u {2} -s deployment.json".format(
         el_uri,
